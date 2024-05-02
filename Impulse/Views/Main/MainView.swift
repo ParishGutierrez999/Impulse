@@ -28,6 +28,11 @@ struct MainView: View {
                     .tabItem {
                         Label("Planner", systemImage: "list.clipboard")
                     }
+                
+                MacroTrackerView(userId: viewModel.currentUserId)
+                    .tabItem {
+                        Label("Macro Tracker", systemImage: "fork.knife.circle")
+                    }
             }
         } else {
             LoginView()

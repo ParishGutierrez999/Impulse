@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct Macros: Codable, Identifiable {
+    let id: String
+    let carbs: String
+    let fats: String
+    let protein: String
+    let date: TimeInterval
+    
+}
