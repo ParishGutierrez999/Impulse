@@ -33,6 +33,11 @@ struct MainView: View {
                     .tabItem {
                         Label("Macro Tracker", systemImage: "fork.knife.circle")
                     }
+                
+                BodyView(userId: viewModel.currentUserId)
+                    .tabItem {
+                        Label("Body Stats View", systemImage: "person.fill")
+                    }
             }
         } else {
             LoginView()
