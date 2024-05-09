@@ -9,7 +9,46 @@ import SwiftUI
 
 struct WorkoutView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack {
+                Image("arnold")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 300)
+                    .padding()
+                
+                Link("Learn More",
+                     destination: .init(string:"https://www.youtube.com/watch?v=d67ldITFMng&list=WL&index=1")!)
+                .font(.title)
+                .foregroundColor(Color.brandPrimary)
+                
+                
+                
+                Image("ppl")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 300)
+                    .padding()
+                
+                Link("Learn More",
+                     destination: .init(string:"https://www.youtube.com/watch?v=d67ldITFMng&list=WL&index=1")!)
+                .font(.title)
+                .foregroundColor(Color.brandPrimary)
+                
+                
+                Image("bro")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 300)
+                    .padding()
+                
+                Link("Learn More",
+                     destination: .init(string:"https://www.youtube.com/watch?v=d67ldITFMng&list=WL&index=1")!)
+                .font(.title)
+                .foregroundColor(Color.brandPrimary)
+                
+            }
+        }
     }
 }
 

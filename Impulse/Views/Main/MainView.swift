@@ -14,15 +14,8 @@ struct MainView: View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
                 //signed in
             TabView {
-                HomePageView()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
                 
-                ProfileView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person.circle")
-                    }
+                
                 
                 PlannerView(userId: viewModel.currentUserId)
                     .tabItem {
@@ -34,9 +27,19 @@ struct MainView: View {
                         Label("Macro Tracker", systemImage: "fork.knife.circle")
                     }
                 
+                ProfileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person.circle")
+                    }
+                
                 BodyView(userId: viewModel.currentUserId)
                     .tabItem {
                         Label("Body Stats View", systemImage: "person.fill")
+                    }
+                
+                WorkoutView()
+                    .tabItem {
+                        Label("Workout Info", systemImage: "dumbbell")
                     }
             }
         } else {
